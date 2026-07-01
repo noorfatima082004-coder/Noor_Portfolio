@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340">
+  <rect width="600" height="340" fill="#111"/>
+  <circle cx="300" cy="170" r="80" fill="none" stroke="#39ff14" stroke-width="2" opacity="0.4"/>
+  <rect x="220" y="130" width="160" height="80" rx="4" fill="#1a2a1a" stroke="#39ff14" stroke-width="1"/>
+  <circle cx="250" cy="160" r="15" fill="#39ff14" opacity="0.3"/>
+  <circle cx="350" cy="180" r="20" fill="#39ff14" opacity="0.2"/>
+  <text x="300" y="300" text-anchor="middle" fill="#39ff14" font-family="Inter,sans-serif" font-size="16" opacity="0.5">Smart Vision Platform</text>
+</svg>

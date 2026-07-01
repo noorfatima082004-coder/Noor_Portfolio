@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340">
+  <rect width="600" height="340" fill="#111"/>
+  <polyline points="40,280 120,200 200,220 280,120 360,160 440,80 520,100" fill="none" stroke="#39ff14" stroke-width="2"/>
+  <rect x="40" y="40" width="520" height="240" rx="8" fill="#1f1f1f"/>
+  <text x="300" y="300" text-anchor="middle" fill="#39ff14" font-family="Inter,sans-serif" font-size="16" opacity="0.5">Analytics Dashboard</text>
+</svg>

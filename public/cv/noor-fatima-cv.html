@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Noor Fatima — CV</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; color: #1a1a1a; background: #fff; line-height: 1.5; }
+
+  /* Loading overlay */
+  #loader {
+    position: fixed; inset: 0; background: #0d1117;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 9999; gap: 16px;
+  }
+  #loader p { color: #ccc; font-size: 14px; font-family: 'Segoe UI', sans-serif; }
+  #loader .dot {
+    width: 10px; height: 10px; background: #39ff14; border-radius: 50%;
+    animation: pulse 1s ease-in-out infinite;
+  }
+  #loader .dots { display: flex; gap: 8px; }
+  #loader .dot:nth-child(2) { animation-delay: 0.2s; }
+  #loader .dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes pulse { 0%,100%{opacity:0.2;transform:scale(0.8)} 50%{opacity:1;transform:scale(1)} }
+
+  /* Page layout */
+  #cv-content { display: grid; grid-template-columns: 210px 1fr; }
+
+  /* Sidebar */
+  .sidebar { background: #0d1117; color: #e6e6e6; padding: 28px 18px; }
+  .sidebar h1 { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+  .sidebar .s-title { font-size: 10px; color: #39ff14; font-weight: 600; margin-top: 3px; letter-spacing: 0.3px; }
+  .sidebar .s-loc { font-size: 9px; color: #777; margin-top: 2px; }
+
+  .sb-sec { margin-top: 20px; }
+  .sb-sec h3 { font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #39ff14; border-bottom: 1px solid #1f2f1f; padding-bottom: 4px; margin-bottom: 8px; }
+
+  .c-item { margin-bottom: 5px; font-size: 9px; color: #bbb; word-break: break-all; }
+  .c-item a { color: #bbb; text-decoration: none; }
+
+  .sg { margin-bottom: 10px; }
+  .sg-t { font-size: 8px; font-weight: 700; color: #39ff14; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.4px; }
+  .stags { display: flex; flex-wrap: wrap; gap: 2px; }
+  .stag { background: #161e16; color: #90d490; border: 1px solid #223322; border-radius: 2px; padding: 1px 5px; font-size: 8px; }
+
+  .lang-r { display: flex; justify-content: space-between; font-size: 9px; color: #bbb; margin-bottom: 3px; }
+  .lang-lv { color: #39ff14; font-size: 8px; }
+
+  /* Main */
+  .main { padding: 28px 24px; }
+  .sec { margin-bottom: 18px; }
+  .sec-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #0d1117; border-bottom: 2px solid #39ff14; padding-bottom: 3px; margin-bottom: 12px; }
+
+  .summary { font-size: 10px; color: #333; line-height: 1.6; }
+
+  .entry { margin-bottom: 12px; }
+  .e-hd { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; }
+  .e-role { font-size: 10.5px; font-weight: 700; color: #0d1117; }
+  .e-period { font-size: 8.5px; color: #2a8a2a; font-weight: 600; white-space: nowrap; }
+  .e-co { font-size: 9px; color: #555; font-style: italic; margin: 1px 0 4px; }
+  .e-ul { padding-left: 13px; }
+  .e-ul li { font-size: 9.5px; color: #333; margin-bottom: 2px; line-height: 1.5; }
+
+  .proj { margin-bottom: 12px; border-left: 3px solid #39ff14; padding-left: 9px; }
+  .p-name { font-size: 10.5px; font-weight: 700; color: #0d1117; }
+  .p-stack { font-size: 8px; color: #2a8a2a; font-weight: 600; margin-bottom: 2px; }
+  .p-ul { padding-left: 13px; }
+  .p-ul li { font-size: 9.5px; color: #333; margin-bottom: 2px; line-height: 1.5; }
+  .p-link { font-size: 8px; color: #0055cc; text-decoration: none; margin-top: 2px; display: block; }
+
+  .r-title { font-size: 10.5px; font-weight: 700; color: #0d1117; margin-bottom: 1px; }
+  .r-meta { font-size: 9px; color: #555; font-style: italic; margin-bottom: 4px; }
+
+  .interests { font-size: 9.5px; color: #444; }
+</style>
+</head>
+<body>
+
+<!-- Loading overlay -->
+<div id="loader">
+  <div class="dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  <p>Generating PDF, please wait…</p>
+</div>
+
+<!-- CV Content -->
+<div id="cv-content">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h1>Noor Fatima</h1>
+    <div class="s-title">AI-Powered Full Stack Developer</div>
+    <div class="s-loc">Faisalabad, Punjab, Pakistan</div>
+
+    <div class="sb-sec">
+      <h3>Contact</h3>
+      <div class="c-item">noor.fatima.082004@gmail.com</div>
+      <div class="c-item">+92 312-8315415</div>
+      <div class="c-item"><a href="https://linkedin.com/in/noor-fatima-747527319">linkedin.com/in/noor-fatima-747527319</a></div>
+      <div class="c-item"><a href="https://github.com/noorfatima082004-coder">github.com/noorfatima082004-coder</a></div>
+    </div>
+
+    <div class="sb-sec">
+      <h3>Skills</h3>
+      <div class="sg">
+        <div class="sg-t">Languages</div>
+        <div class="stags">
+          <span class="stag">Python</span><span class="stag">JavaScript</span><span class="stag">Java</span>
+          <span class="stag">Kotlin</span><span class="stag">C</span><span class="stag">C++</span>
+          <span class="stag">SQL</span><span class="stag">XML</span>
+        </div>
+      </div>
+      <div class="sg">
+        <div class="sg-t">AI / ML</div>
+        <div class="stags">
+          <span class="stag">TensorFlow</span><span class="stag">PyTorch</span><span class="stag">Keras</span>
+          <span class="stag">Scikit-learn</span><span class="stag">OpenCV</span><span class="stag">Whisper</span>
+          <span class="stag">Wav2Vec</span><span class="stag">MediaPipe</span><span class="stag">ResNet50</span>
+          <span class="stag">EfficientNet</span><span class="stag">TF Lite</span>
+        </div>
+      </div>
+      <div class="sg">
+        <div class="sg-t">AI Integrations</div>
+        <div class="stags">
+          <span class="stag">OpenAI API</span><span class="stag">Gemini API</span>
+          <span class="stag">LangChain</span><span class="stag">AI Chatbots</span><span class="stag">RAG</span>
+        </div>
+      </div>
+      <div class="sg">
+        <div class="sg-t">Web / Mobile</div>
+        <div class="stags">
+          <span class="stag">React.js</span><span class="stag">React Native</span><span class="stag">FastAPI</span>
+          <span class="stag">Node.js</span><span class="stag">Django</span><span class="stag">Android Studio</span>
+        </div>
+      </div>
+      <div class="sg">
+        <div class="sg-t">Cloud / Backend</div>
+        <div class="stags">
+          <span class="stag">Firebase</span><span class="stag">Supabase</span><span class="stag">Cloudinary</span>
+          <span class="stag">MongoDB</span><span class="stag">PostgreSQL</span><span class="stag">AWS S3</span>
+        </div>
+      </div>
+      <div class="sg">
+        <div class="sg-t">Tools</div>
+        <div class="stags">
+          <span class="stag">Git</span><span class="stag">VS Code</span><span class="stag">Colab</span>
+          <span class="stag">Kaggle</span><span class="stag">Postman</span><span class="stag">Jupyter</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sb-sec">
+      <h3>Languages</h3>
+      <div class="lang-r"><span>Urdu</span><span class="lang-lv">Native</span></div>
+      <div class="lang-r"><span>English</span><span class="lang-lv">Professional</span></div>
+      <div class="lang-r"><span>Punjabi</span><span class="lang-lv">Native</span></div>
+    </div>
+
+    <div class="sb-sec">
+      <h3>Interests</h3>
+      <div style="font-size:8.5px;color:#bbb;line-height:1.7">
+        AI Research &amp; LLMs · Intelligent Chatbots<br>
+        Full Stack Development · Mobile Apps<br>
+        NLP · MERN Stack · Poetry
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <div class="sec">
+      <div class="sec-title">Professional Summary</div>
+      <p class="summary">
+        Highly motivated <strong>AI-Powered Full Stack Developer</strong> and BS Artificial Intelligence student at NUML (CGPA 3.85). Specialises in building intelligent, production-ready systems — AI chatbots, LLM integrations, ML-powered mobile and web applications. Currently Backend AI Engineer at <strong>FlyRank AI, Chicago</strong>. Co-author of a peer-reviewed paper on cross-modal deepfake detection in Urdu. Passionate about turning AI ideas into elegant, impactful products.
+      </p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title">Experience</div>
+      <div class="entry">
+        <div class="e-hd"><div class="e-role">Backend AI Engineer</div><div class="e-period">2024 — Present</div></div>
+        <div class="e-co">FlyRank AI — Chicago, USA (Remote)</div>
+        <ul class="e-ul">
+          <li>Building AI-powered backend systems, APIs, and LLM integrations for a Chicago-based AI company.</li>
+          <li>Developing intelligent production pipelines and AI-driven features at scale.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="e-hd"><div class="e-role">AI/ML Engineer — Freelance</div><div class="e-period">2024 — Present</div></div>
+        <div class="e-co">Self-Employed</div>
+        <ul class="e-ul">
+          <li>12+ projects delivered — AI chatbots, ML models, full-stack apps across React Native, FastAPI, Firebase, Supabase, Cloudinary.</li>
+          <li>10+ satisfied clients across medical-tech, real estate, and e-commerce domains.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="e-hd"><div class="e-role">Android Development Intern</div><div class="e-period">2024 (3 months)</div></div>
+        <div class="e-co">Tech Hub Institute, Faisalabad</div>
+        <ul class="e-ul">
+          <li>Built Android apps in Java/Kotlin with Firebase backend; applied Material Design on real client projects.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title">Education</div>
+      <div class="entry">
+        <div class="e-hd"><div class="e-role">BS Artificial Intelligence</div><div class="e-period">Sep 2024 — Present</div></div>
+        <div class="e-co">National University of Modern Languages (NUML), Faisalabad</div>
+        <ul class="e-ul">
+          <li>CGPA: <strong>3.85 / 4.0</strong> across four semesters.</li>
+          <li>Courses: Deep Learning, NLP, Computer Vision, Data Structures, Database Systems.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="e-hd"><div class="e-role">FSC Pre-Medical</div><div class="e-period">2021 — 2023</div></div>
+        <div class="e-co">Ummah International College, Faisalabad — 85%</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title">Research &amp; Publications</div>
+      <div class="r-title">DeepScan Urdu: Cross-Modal Deep Learning for Audio-Visual Deepfake Detection in Urdu</div>
+      <div class="r-meta">Co-author · NUML, Faisalabad · 2024–2025</div>
+      <ul class="e-ul">
+        <li>First deepfake detection system for Urdu (70M+ speakers; zero prior work across 100 surveyed papers).</li>
+        <li>230-clip dataset (120 real + 110 synthetic) built with Whisper, Edge TTS &amp; Wav2Lip.</li>
+        <li>AVFF architecture with cross-modal attention — EfficientNet-B4 + 4-block 2D-CNN on MFCCs.</li>
+        <li><strong>94.3% accuracy · 0.984 ROC-AUC</strong> · outperformed late-fusion by 26 pp · 18ms/clip on Tesla T4.</li>
+      </ul>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title">Projects</div>
+      <div class="proj">
+        <div class="p-name">Dermalyze — AI Skin Disease Classification</div>
+        <div class="p-stack">ResNet50 · FastAPI · React.js · Firebase</div>
+        <ul class="p-ul">
+          <li>ResNet50-based multi-class classification of skin conditions from uploaded images.</li>
+          <li>FastAPI inference backend + Firebase Auth + AI-driven care recommendations.</li>
+        </ul>
+      </div>
+      <div class="proj">
+        <div class="p-name">Plantey — AI Plant Disease Detection (Android)</div>
+        <div class="p-stack">Java · TensorFlow Lite · Firebase · Android</div>
+        <ul class="p-ul">
+          <li>On-device TF Lite inference for plant disease detection; Firebase backend + push diagnostics.</li>
+        </ul>
+        <a class="p-link" href="https://github.com/noorfatima082004-coder/Plantey">github.com/noorfatima082004-coder/Plantey</a>
+      </div>
+      <div class="proj">
+        <div class="p-name">PropertyBazar — AI Real Estate Platform</div>
+        <div class="p-stack">React Native · React.js · MongoDB · Cloudinary · AI Features</div>
+        <ul class="p-ul">
+          <li>AI-driven property recommendations, NLP smart search, automated valuation — cross-platform app.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load', function () {
+    var content = document.getElementById('cv-content');
+    var loader = document.getElementById('loader');
+
+    var opt = {
+      margin: 0,
+      filename: 'Noor_Fatima_CV.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: 'avoid-all' }
+    };
+
+    html2pdf().set(opt).from(content).save().then(function () {
+      loader.style.display = 'none';
+    });
+  });
+</script>
+</body>
+</html>
