@@ -1,34 +1,46 @@
 import { Link } from 'react-router-dom'
-import { Globe, Link2, Mail, MapPin, Phone } from 'lucide-react'
+import { Globe, Link2, Mail, MapPin, Phone, ExternalLink } from 'lucide-react'
 import { siteInfo } from '../../data/siteData'
+import { useFiverr } from '../../hooks/useFiverr'
 
 export default function Footer() {
+  const isFiverr = useFiverr()
+
   return (
     <footer className="border-t border-border bg-bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Mail size={18} className="text-accent" />
-              <span className="text-sm font-medium text-muted">Email</span>
+
+          {isFiverr ? (
+            <div>
+              <p className="text-sm font-medium text-muted mb-3">Work With Me</p>
+              <a
+                href={siteInfo.fiverr}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-accent hover:underline"
+              >
+                Order on Fiverr <ExternalLink size={14} />
+              </a>
             </div>
-            <a
-              href={`mailto:${siteInfo.email}`}
-              className="text-sm hover:text-accent transition-colors break-all"
-            >
-              {siteInfo.email}
-            </a>
-            <div className="flex items-center gap-2 mt-4 mb-1">
-              <Phone size={18} className="text-accent" />
-              <span className="text-sm font-medium text-muted">Phone</span>
+          ) : (
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <Mail size={18} className="text-accent" />
+                <span className="text-sm font-medium text-muted">Email</span>
+              </div>
+              <a href={`mailto:${siteInfo.email}`} className="text-sm hover:text-accent transition-colors break-all">
+                {siteInfo.email}
+              </a>
+              <div className="flex items-center gap-2 mt-4 mb-1">
+                <Phone size={18} className="text-accent" />
+                <span className="text-sm font-medium text-muted">Phone</span>
+              </div>
+              <a href={`tel:${siteInfo.phone}`} className="text-sm hover:text-accent transition-colors">
+                {siteInfo.phone}
+              </a>
             </div>
-            <a
-              href={`tel:${siteInfo.phone}`}
-              className="text-sm hover:text-accent transition-colors"
-            >
-              {siteInfo.phone}
-            </a>
-          </div>
+          )}
 
           <div>
             <div className="flex items-center gap-2 mb-3">
@@ -44,7 +56,7 @@ export default function Footer() {
               {[
                 { icon: Link2, href: siteInfo.linkedin, label: 'LinkedIn' },
                 { icon: Globe, href: siteInfo.github, label: 'GitHub' },
-                { icon: Mail, href: `mailto:${siteInfo.email}`, label: 'Email' },
+                ...(!isFiverr ? [{ icon: Mail, href: `mailto:${siteInfo.email}`, label: 'Email' }] : []),
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}

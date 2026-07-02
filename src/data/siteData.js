@@ -1,11 +1,10 @@
 export const headshots = [
   '/images/headshot-1.jpg',
   '/images/headshot-2.jpg',
-  '/images/headshot-3.jpg',
 ]
 
 export const stats = [
-  { value: '12+', label: 'Projects Completed' },
+  { value: '15+', label: 'Projects Completed' },
   { value: '2+', label: 'Years Experience' },
   { value: '10+', label: 'Happy Clients' },
   { value: '5+', label: 'ML Models Deployed' },
@@ -117,19 +116,19 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'Predictive Analytics Dashboard',
-    description: 'ML-powered analytics dashboard with forecasting models and interactive data visualizations.',
-    tags: ['Python', 'TensorFlow', 'D3.js'],
+    title: 'RPA Insurance Policy Document Classification System',
+    description: 'An automated AI pipeline that eliminates manual document handling in the insurance lifecycle — from multi-channel ingestion and OCR extraction to AI classification and real-time dashboard monitoring.',
+    tags: ['RPA', 'OCR', 'AI Classification', 'React.js', 'FastAPI', 'Python'],
     image: '/images/project-3.svg',
+    video: '/videos/rpa-insurance.mp4',
     featured: true,
-  },
-  {
-    id: 4,
-    title: 'E-Commerce AI Engine',
-    description: 'Recommendation engine and personalization system for e-commerce with A/B testing integration.',
-    tags: ['Node.js', 'MongoDB', 'React'],
-    image: '/images/project-4.svg',
-    featured: true,
+    details: [
+      'Ingestion: Captures documents from web portals and emails with initial validation — replacing error-prone manual sorting entirely.',
+      'OCR + Classification: Advanced OCR converts scanned PDFs and images to machine-readable text; a core AI engine then classifies insurance products (Life, Health, Motor) with 90%+ accuracy.',
+      'Orchestration: Jobs are auto-routed to department queues by confidence score; low-confidence documents are flagged for Human-in-the-Loop review to maintain audit-readiness.',
+      'Monitoring: A React-based dashboard gives operations teams real-time visibility into throughput, queue volumes, and performance metrics.',
+      'Impact: Modular architecture achieves 80%+ reduction in manual sorting time; decoupled frontend/backend ensures independent scalability as the organisation grows.',
+    ],
   },
 ]
 
@@ -256,6 +255,7 @@ export const siteInfo = {
   location: 'Pakistan, Punjab',
   linkedin: 'https://www.linkedin.com/in/noor-fatima-747527319',
   github: 'https://github.com/noorfatima082004-coder',
+  fiverr: 'https://www.fiverr.com/s/KeAZG98',
   availability: 'Available for Freelance & Full-time',
   quote: 'I don\'t just write code — I engineer intelligence.',
   cvPath: '/cv/noor-fatima-cv.html',
