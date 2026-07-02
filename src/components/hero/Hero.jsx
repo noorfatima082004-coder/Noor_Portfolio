@@ -7,60 +7,65 @@ import TechStack from './TechStack'
 
 export default function Hero() {
   return (
-    <section id="home" className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
-      <div className="absolute top-1/4 -left-32 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="home" className="relative pt-24 pb-16 lg:pt-36 lg:pb-24" style={{ overflow: 'hidden' }}>
+      <div className="absolute top-1/4 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-8 items-center">
+
+          {/* Text — shown second on mobile (flex-col-reverse makes portrait first) */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-bg-elevated text-xs text-muted mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-bg-elevated text-xs text-muted mb-5">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
               {siteInfo.tagline}
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-5">
               {siteInfo.headline}{' '}
               <span className="text-accent text-glow">{siteInfo.headlineAccent}</span>
             </h1>
 
-            <p className="text-muted text-base sm:text-lg max-w-lg mb-8 leading-relaxed">
+            <p className="text-muted text-sm sm:text-lg max-w-lg mb-7 leading-relaxed">
               {siteInfo.bio}
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-2">
+            <div className="flex flex-wrap gap-3 mb-2">
               <a
                 href={siteInfo.cvPath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-bg font-semibold rounded-full hover:bg-accent-dim transition-colors glow-accent"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-bg font-semibold rounded-full hover:bg-accent-dim transition-colors glow-accent text-sm"
               >
-                <Download size={18} />
+                <Download size={16} />
                 Download CV
               </a>
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-accent/50 text-accent rounded-full hover:bg-accent/10 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-accent/50 text-accent rounded-full hover:bg-accent/10 transition-colors text-sm"
               >
                 Explore Projects
-                <ArrowUpRight size={18} />
+                <ArrowUpRight size={16} />
               </Link>
             </div>
 
             <TechStack />
           </motion.div>
 
+          {/* Portrait — shown first on mobile */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="w-full flex justify-center"
           >
             <HeroPortrait />
           </motion.div>
+
         </div>
       </div>
     </section>

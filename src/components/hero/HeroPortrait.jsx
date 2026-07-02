@@ -61,7 +61,7 @@ export default function HeroPortrait() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[420px] mx-auto aspect-square"
+      className="relative w-full max-w-[280px] sm:max-w-[360px] lg:max-w-[420px] mx-auto aspect-square"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => { mouseX.set(0); mouseY.set(0) }}
     >
@@ -132,7 +132,7 @@ export default function HeroPortrait() {
         </motion.div>
 
         <motion.div
-          className="absolute -bottom-2 -right-2 sm:right-0 max-w-[220px] p-3 rounded-xl bg-bg-elevated/95 border border-border backdrop-blur-sm"
+          className="absolute -bottom-2 right-0 max-w-[200px] p-2.5 rounded-xl bg-bg-elevated/95 border border-border backdrop-blur-sm"
           style={{ zIndex: 20 }}
           initial={{ opacity: 0, y: 16, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
