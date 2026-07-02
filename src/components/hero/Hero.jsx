@@ -16,9 +16,9 @@ export default function Hero() {
 
           {/* Text — shown FIRST on mobile, left column on desktop */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-bg-elevated text-xs text-muted mb-5">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
