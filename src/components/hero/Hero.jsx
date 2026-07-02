@@ -15,11 +15,7 @@ export default function Hero() {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-8 items-center">
 
           {/* Text — shown FIRST on mobile, left column on desktop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-          >
+          <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-bg-elevated text-xs text-muted mb-5">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
               {siteInfo.tagline}
@@ -54,7 +50,7 @@ export default function Hero() {
             </div>
 
             <TechStack />
-          </motion.div>
+          </div>
 
           {/* Portrait — shown SECOND on mobile, right column on desktop */}
           <motion.div
