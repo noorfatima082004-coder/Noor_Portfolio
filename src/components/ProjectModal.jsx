@@ -35,42 +35,54 @@ export default function ProjectModal({ project, onClose }) {
           </button>
 
           {/* Media */}
-          <div className={`relative bg-black overflow-hidden rounded-t-2xl ${project.images ? 'aspect-[9/16] max-h-[70vh]' : 'aspect-video'}`}>
+          <div className={`relative bg-black overflow-hidden rounded-t-2xl ${project.images ? '' : 'aspect-video'}`}>
             {project.images ? (
-              /* Image gallery for projects with multiple screenshots */
-              <>
-                <img
-                  key={imgIndex}
-                  src={project.images[imgIndex]}
-                  alt={`${project.title} screenshot ${imgIndex + 1}`}
-                  className="w-full h-full object-contain bg-black"
-                />
-                {project.images.length > 1 && (
-                  <>
-                    <button
-                      onClick={() => setImgIndex((imgIndex - 1 + project.images.length) % project.images.length)}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 border border-white/20 hover:bg-accent/80 hover:border-accent transition-colors"
-                    >
-                      <ChevronLeft size={20} className="text-white" />
-                    </button>
-                    <button
-                      onClick={() => setImgIndex((imgIndex + 1) % project.images.length)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 border border-white/20 hover:bg-accent/80 hover:border-accent transition-colors"
-                    >
-                      <ChevronRight size={20} className="text-white" />
-                    </button>
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-                      {project.images.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => setImgIndex(i)}
-                          className={`h-1.5 rounded-full transition-all duration-300 ${i === imgIndex ? 'w-6 bg-accent' : 'w-1.5 bg-white/40'}`}
-                        />
-                      ))}
+              /* Full-width horizontal image slider */
+              <div className="relative w-full" style={{ height: '60vh' }}>
+                {/* Slider track */}
+                <div
+                  className="flex h-full transition-transform duration-300 ease-in-out"
+                  style={{ transform: `translateX(-${imgIndex * 100}%)` }}
+                >
+                  {project.images.map((src, i) => (
+                    <div key={i} className="flex-shrink-0 w-full h-full flex items-center justify-center bg-black">
+                      <img
+                        src={src}
+                        alt={`${project.title} screenshot ${i + 1}`}
+                        className="h-full w-auto max-w-full object-contain"
+                      />
                     </div>
-                  </>
-                )}
-              </>
+                  ))}
+                </div>
+
+                {/* Prominent arrows */}
+                <button
+                  onClick={() => setImgIndex((imgIndex - 1 + project.images.length) % project.images.length)}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-accent flex items-center justify-center shadow-lg hover:scale-110 transition-transform glow-accent"
+                >
+                  <ChevronLeft size={24} className="text-bg" />
+                </button>
+                <button
+                  onClick={() => setImgIndex((imgIndex + 1) % project.images.length)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-accent flex items-center justify-center shadow-lg hover:scale-110 transition-transform glow-accent"
+                >
+                  <ChevronRight size={24} className="text-bg" />
+                </button>
+
+                {/* Dot indicators + counter */}
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
+                  {project.images.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setImgIndex(i)}
+                      className={`h-2 rounded-full transition-all duration-300 ${i === imgIndex ? 'w-7 bg-accent' : 'w-2 bg-white/40 hover:bg-white/70'}`}
+                    />
+                  ))}
+                </div>
+                <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 text-white text-xs font-medium">
+                  {imgIndex + 1} / {project.images.length}
+                </div>
+              </div>
             ) : project.video ? (
               !playing ? (
                 <>
