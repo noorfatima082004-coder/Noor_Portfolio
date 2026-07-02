@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X, Send, Loader2, Bot } from 'lucide-react'
 
-const SYSTEM_PROMPT = `You are Noor's AI assistant on her personal portfolio website. You help visitors learn about Noor Fatima — a BS Artificial Intelligence student and AI-Powered Full Stack Developer from Faisalabad, Pakistan.
+const SYSTEM_PROMPT = `You are Noor's AI assistant on her personal portfolio website. You help visitors learn about Noor Fatima — an AI Engineer and AI-Powered Full Stack Developer from Faisalabad, Pakistan.
 
 ABOUT NOOR:
 - BS Artificial Intelligence at NUML (National University of Modern Languages), Faisalabad — CGPA 3.85/4.0

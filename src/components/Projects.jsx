@@ -35,39 +35,26 @@ export default function Projects({ limit = 4 }) {
               onClick={() => setSelected(project)}
               className="group cursor-pointer rounded-xl bg-bg-card border border-border overflow-hidden hover:border-accent/40 transition-all"
             >
-              <div className="relative overflow-hidden aspect-[16/10] bg-black">
-                {project.video ? (
-                  <>
-                    <video
-                      src={project.video}
-                      className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-500"
-                      muted loop autoPlay playsInline
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-9 h-9 rounded-full bg-accent/80 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Play size={16} className="text-bg ml-0.5" fill="currentColor" />
-                      </div>
+              <div className="relative overflow-hidden aspect-[16/10] bg-bg-elevated">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                />
+                {project.video && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-9 h-9 rounded-full bg-accent/80 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 group-hover:bg-accent transition-all">
+                      <Play size={15} className="text-bg ml-0.5" fill="currentColor" />
                     </div>
-                    {project.isResearch && (
-                      <div className="absolute top-2 left-2">
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-accent/20 border border-accent/40 text-accent text-[10px] font-medium backdrop-blur-sm">
-                          <FlaskConical size={9} />
-                          Research
-                        </span>
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-3 right-3 p-1.5 rounded-full bg-bg/80 border border-border opacity-0 group-hover:opacity-100 transition-opacity">
-                      <ArrowUpRight size={14} className="text-accent" />
-                    </div>
-                  </>
+                  </div>
+                )}
+                {project.isResearch && (
+                  <div className="absolute top-2 left-2">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-accent/20 border border-accent/40 text-accent text-[10px] font-medium backdrop-blur-sm">
+                      <FlaskConical size={9} />
+                      Research
+                    </span>
+                  </div>
                 )}
               </div>
               <div className="p-5">

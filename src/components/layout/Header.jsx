@@ -43,8 +43,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full border-2 border-accent flex items-center justify-center glow-accent group-hover:scale-105 transition-transform">
-              <span className="text-accent font-bold text-lg">N</span>
+            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-accent/70 glow-accent group-hover:scale-105 transition-transform shrink-0 bg-black">
+              <img src="/images/nf-logo.jpg" alt="NF" className="w-full h-full object-cover" />
             </div>
             <div className="hidden sm:block">
               <p className="font-bold text-sm tracking-wide">{siteInfo.name}</p>
