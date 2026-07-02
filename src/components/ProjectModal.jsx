@@ -35,7 +35,7 @@ export default function ProjectModal({ project, onClose }) {
           </button>
 
           {/* Media */}
-          <div className="relative bg-black aspect-video overflow-hidden rounded-t-2xl">
+          <div className={`relative bg-black overflow-hidden rounded-t-2xl ${project.images ? 'aspect-[9/16] max-h-[70vh]' : 'aspect-video'}`}>
             {project.images ? (
               /* Image gallery for projects with multiple screenshots */
               <>
@@ -43,7 +43,7 @@ export default function ProjectModal({ project, onClose }) {
                   key={imgIndex}
                   src={project.images[imgIndex]}
                   alt={`${project.title} screenshot ${imgIndex + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-black"
                 />
                 {project.images.length > 1 && (
                   <>

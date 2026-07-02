@@ -42,7 +42,7 @@ export default function ProjectsPage() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                    className={`w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-300 ${project.images ? 'object-contain' : 'object-cover'}`}
                   />
                 )}
                 <div className="absolute inset-0 flex items-center justify-center">
