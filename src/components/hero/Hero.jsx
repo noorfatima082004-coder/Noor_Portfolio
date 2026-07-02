@@ -12,9 +12,9 @@ export default function Hero() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-8 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-8 items-center">
 
-          {/* Text — shown second on mobile (flex-col-reverse makes portrait first) */}
+          {/* Text — shown FIRST on mobile, left column on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function Hero() {
             <TechStack />
           </motion.div>
 
-          {/* Portrait — shown first on mobile */}
+          {/* Portrait — shown SECOND on mobile, right column on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
