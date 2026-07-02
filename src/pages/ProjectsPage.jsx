@@ -77,7 +77,7 @@ export default function ProjectsPage() {
         </div>
       </div>
 
-      <ProjectModal project={selected} onClose={() => setSelected(null)} />
+      <ProjectModal key={selected?.id} project={selected} onClose={() => setSelected(null)} />
     </div>
   )
 }

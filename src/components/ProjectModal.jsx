@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, FlaskConical, Play } from 'lucide-react'
+import { X, FlaskConical, Play, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function ProjectModal({ project, onClose }) {
   const [playing, setPlaying] = useState(false)
+  const [imgIndex, setImgIndex] = useState(0)
 
   if (!project) return null
+
+  // Reset state when modal opens different project (key on project.id handles this)
 
   return (
     <AnimatePresence>
@@ -33,10 +36,44 @@ export default function ProjectModal({ project, onClose }) {
 
           {/* Media */}
           <div className="relative bg-black aspect-video overflow-hidden rounded-t-2xl">
-            {project.video ? (
+            {project.images ? (
+              /* Image gallery for projects with multiple screenshots */
+              <>
+                <img
+                  key={imgIndex}
+                  src={project.images[imgIndex]}
+                  alt={`${project.title} screenshot ${imgIndex + 1}`}
+                  className="w-full h-full object-cover"
+                />
+                {project.images.length > 1 && (
+                  <>
+                    <button
+                      onClick={() => setImgIndex((imgIndex - 1 + project.images.length) % project.images.length)}
+                      className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 border border-white/20 hover:bg-accent/80 hover:border-accent transition-colors"
+                    >
+                      <ChevronLeft size={20} className="text-white" />
+                    </button>
+                    <button
+                      onClick={() => setImgIndex((imgIndex + 1) % project.images.length)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 border border-white/20 hover:bg-accent/80 hover:border-accent transition-colors"
+                    >
+                      <ChevronRight size={20} className="text-white" />
+                    </button>
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                      {project.images.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => setImgIndex(i)}
+                          className={`h-1.5 rounded-full transition-all duration-300 ${i === imgIndex ? 'w-6 bg-accent' : 'w-1.5 bg-white/40'}`}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
+              </>
+            ) : project.video ? (
               !playing ? (
                 <>
-                  {/* Static thumbnail — no video preload, works on all mobile browsers */}
                   <img
                     src={project.image}
                     alt={project.title}

@@ -83,7 +83,7 @@ export default function Projects({ limit = 4 }) {
         </div>
       </div>
 
-      <ProjectModal project={selected} onClose={() => setSelected(null)} />
+      <ProjectModal key={selected?.id} project={selected} onClose={() => setSelected(null)} />
     </section>
   )
 }
