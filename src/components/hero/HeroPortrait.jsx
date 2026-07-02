@@ -95,7 +95,7 @@ export default function HeroPortrait() {
           transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
         />
 
-        <div className="absolute inset-8 rounded-full overflow-hidden border-2 border-accent/30 glow-accent-strong">
+        <div className="absolute inset-8 rounded-full overflow-hidden border-2 border-accent/30 glow-accent-strong" style={{ transform: 'translateZ(0)', WebkitTransform: 'translateZ(0)' }}>
           {headshots.map((src, i) => {
             const isCurrent = i === index
             const isPrev = i === prev

@@ -36,12 +36,13 @@ export default function ProjectModal({ project, onClose }) {
             {project.video ? (
               !playing ? (
                 <>
-                  <video
-                    src={project.video}
-                    className="w-full h-full object-cover opacity-60"
-                    muted loop autoPlay playsInline
+                  {/* Static thumbnail — no video preload, works on all mobile browsers */}
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover opacity-70"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                     <button
                       onClick={() => setPlaying(true)}
                       className="w-16 h-16 rounded-full bg-accent/90 flex items-center justify-center glow-accent hover:scale-110 transition-transform"
@@ -59,7 +60,14 @@ export default function ProjectModal({ project, onClose }) {
                   )}
                 </>
               ) : (
-                <video src={project.video} className="w-full h-full object-cover" controls autoPlay />
+                <video
+                  src={project.video}
+                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                  preload="auto"
+                  autoPlay
+                />
               )
             ) : (
               <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
