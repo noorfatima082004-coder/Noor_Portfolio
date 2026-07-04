@@ -161,8 +161,8 @@ export const projects = [
     title: 'RPA Insurance Policy Document Classification System',
     description: 'An automated AI pipeline that eliminates manual document handling in the insurance lifecycle — from multi-channel ingestion and OCR extraction to AI classification and real-time dashboard monitoring.',
     tags: ['RPA', 'OCR', 'AI Classification', 'React.js', 'FastAPI', 'Python'],
-    image: '/images/project-3.svg',
-    video: '/videos/rpa-insurance.mp4',
+    image: '/images/rpa-insurance-thumbnail.jpg',
+    youtube: 'https://www.youtube.com/embed/j-cWfzdsK4c',
     featured: true,
     details: [
       'Ingestion: Captures documents from web portals and emails with initial validation — replacing error-prone manual sorting entirely.',
