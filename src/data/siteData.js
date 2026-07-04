@@ -141,6 +141,22 @@ export const projects = [
     ],
   },
   {
+    id: 5,
+    title: 'AI Air Canvas — Gesture-Controlled Virtual Drawing',
+    description: 'A touchless drawing system that turns hand movements into digital ink using real-time computer vision — with jitter-free stabilization, gesture-based controls, and OCR that converts mid-air handwriting into an exportable PDF.',
+    tags: ['Python', 'OpenCV', 'MediaPipe', 'OCR (Tesseract)', 'Pillow'],
+    image: '/images/project-4.svg',
+    video: '/videos/air-canvas.mp4',
+    featured: true,
+    details: [
+      'Overview: A touchless, gesture-controlled drawing system that turns hand movements captured via webcam into smooth digital strokes — no mouse, stylus, or keyboard involved.',
+      'Hand Tracking: Built on OpenCV and MediaPipe Hand Landmark detection for real-time fingertip tracking, refined with Kalman filtering and weighted moving-average smoothing to eliminate shaky, zig-zag lines.',
+      'Gesture Controls: Distinct hand poses drive every tool switch — pinch-to-zoom on the canvas, a two-finger gesture to summon the color palette, an open flat palm to auto-activate the eraser, and a closed-fist hold to capture the canvas.',
+      'OCR Pipeline: On capture, the canvas snapshot is preprocessed (grayscale conversion, thresholding, denoising) and passed through the Tesseract OCR engine via pytesseract to convert hand-drawn text into machine-readable output.',
+      'Export: Automatically generates a PDF combining the OCR-extracted text with the canvas snapshot using Pillow and fpdf2 — turning mid-air handwriting into a shareable document in one gesture.',
+    ],
+  },
+  {
     id: 3,
     title: 'RPA Insurance Policy Document Classification System',
     description: 'An automated AI pipeline that eliminates manual document handling in the insurance lifecycle — from multi-channel ingestion and OCR extraction to AI classification and real-time dashboard monitoring.',
