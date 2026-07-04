@@ -101,8 +101,8 @@ export const projects = [
     title: 'Deepfake Urdu Detection',
     description: 'Research project on audiovisual fake face (AVFF) detection for Urdu-language media using multimodal deep learning and facial analysis.',
     tags: ['Python', 'DeepFace', 'Wav2Vec', 'Multimodal'],
-    image: '/images/project-2.svg',
-    video: '/videos/deepfake-demo.mp4',
+    image: '/images/deepfake-thumbnail.jpg',
+    youtube: 'https://www.youtube.com/embed/kXObiLGIPBI',
     featured: true,
     isResearch: true,
     details: [
