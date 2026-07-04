@@ -87,8 +87,8 @@ export const projects = [
     title: 'Dermalyze — Skin Disease Detection',
     description: 'Medical-tech system using Deep Learning to classify skin conditions from user-uploaded images with AI-driven care recommendations.',
     tags: ['ResNet50', 'FastAPI', 'React.js', 'Firebase'],
-    image: '/images/project-1.svg',
-    video: '/videos/dermalyze.mp4',
+    image: '/images/dermalyze-thumbnail.jpg',
+    youtube: 'https://www.youtube.com/embed/xTbrDMXNTPw',
     featured: true,
     details: [
       'Overview: Built a medical-tech system using Deep Learning to classify skin conditions from user-uploaded images.',
