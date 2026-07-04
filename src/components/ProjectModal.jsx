@@ -83,7 +83,7 @@ export default function ProjectModal({ project, onClose }) {
                   {imgIndex + 1} / {project.images.length}
                 </div>
               </div>
-            ) : project.video ? (
+            ) : project.video || project.youtube ? (
               !playing ? (
                 <>
                   <img
@@ -108,6 +108,14 @@ export default function ProjectModal({ project, onClose }) {
                     </div>
                   )}
                 </>
+              ) : project.youtube ? (
+                <iframe
+                  src={`${project.youtube}?autoplay=1`}
+                  className="w-full h-full"
+                  title={project.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               ) : (
                 <video
                   src={project.video}

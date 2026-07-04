@@ -143,10 +143,10 @@ export const projects = [
   {
     id: 5,
     title: 'AI Air Canvas — Gesture-Controlled Virtual Drawing',
-    description: 'A touchless drawing system that turns hand movements into digital ink using real-time computer vision — with jitter-free stabilization, gesture-based controls, and OCR that converts mid-air handwriting into an exportable PDF.',
-    tags: ['Python', 'OpenCV', 'MediaPipe', 'OCR (Tesseract)', 'Pillow'],
-    image: '/images/project-4.svg',
-    video: '/videos/air-canvas.mp4',
+    description: 'A touchless drawing system that turns hand movements into digital ink using real-time computer vision, hand landmark detection, and gesture recognition — refined with Kalman filtering for jitter-free strokes, and extended with OCR and automatic PDF generation to turn mid-air handwriting into a shareable document. A hands-free take on human-computer interaction (HCI).',
+    tags: ['Computer Vision', 'Hand Landmark Detection', 'Gesture Recognition', 'Kalman Filtering', 'OCR', 'PDF Generation', 'Real-time Image Processing', 'Human-Computer Interaction (HCI)'],
+    image: '/images/air-canvas-thumbnail.jpg',
+    youtube: 'https://www.youtube.com/embed/1m7vRILUQJ0',
     featured: true,
     details: [
       'Overview: A touchless, gesture-controlled drawing system that turns hand movements captured via webcam into smooth digital strokes — no mouse, stylus, or keyboard involved.',
