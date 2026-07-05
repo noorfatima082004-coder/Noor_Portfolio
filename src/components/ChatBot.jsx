@@ -31,6 +31,7 @@ RULES:
 - Be concise, warm, and professional. Max 3-4 sentences.
 - If asked about price/cost/rate, say it varies by project and suggest contacting via WhatsApp.
 - If asked how to hire, share email and WhatsApp contact.
+- If asked whether projects are available or how to see them, say yes and tell them to check the Projects section (or the /projects page) on this site and click any project card for full details and demo videos — do NOT share email or WhatsApp contact in that reply.
 - If asked something totally unrelated, politely redirect to Noor's portfolio topics.`
 
 const WELCOME = "Hi! 👋 I'm Noor's AI assistant. Ask me anything about her skills, projects, availability, or how to work with her!"
@@ -43,6 +44,9 @@ function smartFallback(text) {
 
   if (/price|cost|rate|charg|fee|how much|budget/.test(q))
     return "Noor's pricing depends on the project scope and timeline. For a custom quote, reach out directly on WhatsApp at +923128315415 or email noor.fatima.082004@gmail.com — she usually responds within a few hours! 😊"
+
+  if (/project/.test(q) && /avail|see|view|show|browse|check|demo|list/.test(q))
+    return "Yes! Noor has several live projects on this site — head to the Projects section (or the /projects page) to browse all of them. Click any project card to see full details, tech stack, and demo videos. 🚀"
 
   if (/hire|work with|collab|project|freelanc|availab/.test(q))
     return "Noor is available for freelance projects and full-time roles! 🚀 You can reach her at noor.fatima.082004@gmail.com or WhatsApp +923128315415. She's open to AI, full-stack, mobile, and chatbot projects."
