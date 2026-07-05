@@ -172,6 +172,21 @@ export const projects = [
       'Impact: Modular architecture achieves 80%+ reduction in manual sorting time; decoupled frontend/backend ensures independent scalability as the organisation grows.',
     ],
   },
+  {
+    id: 6,
+    title: 'AI Content Toolkit — Plagiarism, Summarization & Paraphrasing',
+    description: 'An all-in-one AI writing assistant delivered for an Upwork client — detects plagiarism, summarizes long documents, converts PDFs into editable Word files, and rephrases text to improve originality, all from a single streamlined tool.',
+    tags: ['Python', 'NLP', 'Plagiarism Detection', 'Text Summarization', 'PDF to DOCX', 'Paraphrasing'],
+    image: '/images/ai-plagiarism-thumbnail.jpg',
+    featured: true,
+    details: [
+      'Plagiarism Detection: Scans submitted text and flags duplicated or unoriginal content with a similarity score, helping writers verify originality before submission.',
+      'Text Summarization: Condenses long-form documents into accurate, concise summaries using NLP-based extraction, saving reviewers time on lengthy content.',
+      'PDF to Word Conversion: Converts PDF files into fully editable, correctly formatted Word (.docx) documents — no manual retyping required.',
+      'Paraphrasing Engine: Rewrites input text to improve originality and readability while preserving the original meaning, ideal for reworking flagged content.',
+      'Delivery: Built and delivered as a freelance solution on Upwork, packaged into a single, non-technical-friendly workflow covering the full document lifecycle.',
+    ],
+  },
 ]
 
 export const research = [
