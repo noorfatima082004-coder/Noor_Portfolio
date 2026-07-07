@@ -149,7 +149,7 @@ function Bubble({ msg }) {
       <div
         className={`max-w-[82%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-line ${
           isBot
-            ? 'bg-bg-elevated border border-border text-white rounded-tl-sm'
+            ? 'bg-bg-elevated border border-border text-text rounded-tl-sm'
             : 'bg-accent text-bg font-medium rounded-tr-sm'
         }`}
       >
