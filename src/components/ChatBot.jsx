@@ -225,7 +225,7 @@ export default function ChatBot() {
             exit={{ opacity: 0, y: 24, scale: 0.95 }}
             transition={{ duration: 0.25 }}
             className="fixed bottom-24 right-6 z-40 w-[340px] sm:w-[380px] rounded-2xl bg-bg-card border border-border shadow-2xl flex flex-col overflow-hidden"
-            style={{ height: '480px' }}
+            style={{ height: 'min(480px, calc(100vh - 140px))' }}
           >
             {/* Header */}
             <div className="flex items-center gap-3 px-4 py-3 border-b border-border bg-bg-elevated">
