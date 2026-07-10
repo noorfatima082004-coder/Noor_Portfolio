@@ -88,7 +88,7 @@ export const projects = [
     description: 'Medical-tech system using Deep Learning to classify skin conditions from user-uploaded images with AI-driven care recommendations.',
     tags: ['ResNet50', 'FastAPI', 'React.js', 'Firebase'],
     image: '/images/dermalyze-thumbnail.jpg',
-    youtube: 'https://www.youtube.com/embed/xTbrDMXNTPw',
+    youtube: 'https://www.youtube.com/embed/8UQml_qvUPo',
     featured: true,
     details: [
       'Overview: Built a medical-tech system using Deep Learning to classify skin conditions from user-uploaded images.',
@@ -102,7 +102,7 @@ export const projects = [
     description: 'Research project on audiovisual fake face (AVFF) detection for Urdu-language media using multimodal deep learning and facial analysis.',
     tags: ['Python', 'DeepFace', 'Wav2Vec', 'Multimodal'],
     image: '/images/deepfake-thumbnail.jpg',
-    youtube: 'https://www.youtube.com/embed/kXObiLGIPBI',
+    youtube: 'https://www.youtube.com/embed/s5ofqU761aI',
     featured: true,
     isResearch: true,
     details: [
@@ -146,7 +146,7 @@ export const projects = [
     description: 'A touchless drawing system that turns hand movements into digital ink using real-time computer vision, hand landmark detection, and gesture recognition — refined with Kalman filtering for jitter-free strokes, and extended with OCR and automatic PDF generation to turn mid-air handwriting into a shareable document. A hands-free take on human-computer interaction (HCI).',
     tags: ['Computer Vision', 'Hand Landmark Detection', 'Gesture Recognition', 'Kalman Filtering', 'OCR', 'PDF Generation', 'Real-time Image Processing', 'Human-Computer Interaction (HCI)'],
     image: '/images/air-canvas-thumbnail.jpg',
-    youtube: 'https://www.youtube.com/embed/1m7vRILUQJ0',
+    youtube: 'https://www.youtube.com/embed/WRvCpZ7fHig',
     featured: true,
     details: [
       'Overview: A touchless, gesture-controlled drawing system that turns hand movements captured via webcam into smooth digital strokes — no mouse, stylus, or keyboard involved.',
@@ -162,7 +162,7 @@ export const projects = [
     description: 'An automated AI pipeline that eliminates manual document handling in the insurance lifecycle — from multi-channel ingestion and OCR extraction to AI classification and real-time dashboard monitoring.',
     tags: ['RPA', 'OCR', 'AI Classification', 'React.js', 'FastAPI', 'Python'],
     image: '/images/rpa-insurance-thumbnail.jpg',
-    youtube: 'https://www.youtube.com/embed/j-cWfzdsK4c',
+    youtube: 'https://www.youtube.com/embed/AvUUlnB4LZ0',
     featured: true,
     details: [
       'Ingestion: Captures documents from web portals and emails with initial validation — replacing error-prone manual sorting entirely.',
@@ -193,7 +193,7 @@ export const projects = [
     description: 'A full-stack real-time messaging application with WhatsApp-style delivery ticks, live presence, typing indicators, and media sharing — built with Socket.io and a JWT-secured REST API for secure, scalable one-to-one chat.',
     tags: ['Socket.io', 'Node.js', 'JWT Auth', 'WebSockets', 'REST API', 'Real-time Messaging'],
     image: '/images/messenger-thumbnail.jpg',
-    youtube: 'https://www.youtube.com/embed/9o8P5FlM_K4',
+    youtube: 'https://www.youtube.com/embed/d9ttLvFYH4U',
     featured: true,
     details: [
       'Real-time Messaging: One-to-one chat powered by Socket.io with instant delivery, WhatsApp-style ticks (sent/delivered/seen), live online/offline presence with last-seen, and typing indicators.',
