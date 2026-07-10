@@ -187,6 +187,22 @@ export const projects = [
       'Delivery: Built and delivered as a freelance solution on Upwork, packaged into a single, non-technical-friendly workflow covering the full document lifecycle.',
     ],
   },
+  {
+    id: 7,
+    title: 'Real-Time Messenger — WhatsApp-Style Chat App',
+    description: 'A full-stack real-time messaging application with WhatsApp-style delivery ticks, live presence, typing indicators, and media sharing — built with Socket.io and a JWT-secured REST API for secure, scalable one-to-one chat.',
+    tags: ['Socket.io', 'Node.js', 'JWT Auth', 'WebSockets', 'REST API', 'Real-time Messaging'],
+    image: '/images/messenger-thumbnail.jpg',
+    youtube: 'https://www.youtube.com/embed/9o8P5FlM_K4',
+    featured: true,
+    details: [
+      'Real-time Messaging: One-to-one chat powered by Socket.io with instant delivery, WhatsApp-style ticks (sent/delivered/seen), live online/offline presence with last-seen, and typing indicators.',
+      'Media Sharing: Supports image, voice note, and document sharing, with message pin, edit, and delete controls governed by a time-window policy, plus full emoji support.',
+      'Security: JWT-secured REST API with token-verified WebSocket connections, rate-limited endpoints, and file-type/size validation on every upload.',
+      'Architecture: Clean separation between auth, data, and storage layers for a scalable, maintainable backend.',
+      'UI: Fully responsive, mobile-first interface designed for a smooth chat experience across devices.',
+    ],
+  },
 ]
 
 export const research = [

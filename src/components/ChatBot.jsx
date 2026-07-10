@@ -17,7 +17,7 @@ LinkedIn: linkedin.com/in/noor-fatima-747527319 | GitHub: github.com/noorfatima0
 
 SKILLS: TensorFlow, PyTorch, Keras, OpenCV, Whisper, React.js, React Native, FastAPI, Node.js, Firebase, Supabase, Cloudinary, MongoDB, Java, Kotlin, Python, JavaScript, C, C++, OpenAI API, Gemini API, LangChain, AI Chatbots, RAG
 
-PROJECTS (AI-based): Dermalyze (AI skin disease detection), Plantey (Android plant disease detection), RPA Insurance Policy Document Classification, AI Air Canvas (gesture-controlled drawing with OCR), AI Content Toolkit (plagiarism detection, summarization, PDF-to-Word conversion, paraphrasing). Noor has also delivered multiple e-commerce development sites for clients. A real estate platform is in the pipeline — coming soon.
+PROJECTS (AI-based): Dermalyze (AI skin disease detection), Plantey (Android plant disease detection), RPA Insurance Policy Document Classification, AI Air Canvas (gesture-controlled drawing with OCR), AI Content Toolkit (plagiarism detection, summarization, PDF-to-Word conversion, paraphrasing). Also built a Real-Time Messenger — a WhatsApp-style chat app with Socket.io messaging, delivery ticks, live presence, typing indicators, media sharing, and a JWT-secured REST API. Noor has also delivered multiple e-commerce development sites for clients. A real estate platform is in the pipeline — coming soon.
 
 RESEARCH & PUBLICATIONS: Co-authored research on Audiovisual Fake Face (AVFF) Detection for Urdu-language media — the first deepfake detection system targeting Urdu (70M+ speakers). Achieved 94.3% accuracy and 0.984 ROC-AUC using a multimodal deep learning approach (EfficientNet-B4 for video, a 2D-CNN for audio/MFCCs, and cross-modal attention). The paper is currently being prepared for publication and should be published soon.
 
@@ -82,6 +82,9 @@ function smartFallback(text) {
   if (/plagiar|summar|paraphrase|rephrase/.test(q))
     return "Noor built an AI Content Toolkit that detects plagiarism, summarizes long documents, converts PDFs into editable Word files, and rephrases text to improve originality — delivered as a freelance project. 📝"
 
+  if (/messenger|chat app|whatsapp|socket\.?io|real-?time messag/.test(q))
+    return "Noor built a Real-Time Messenger — a WhatsApp-style chat app with Socket.io messaging, delivery ticks (sent/delivered/seen), live presence, typing indicators, and image/voice/document sharing, secured with a JWT-based REST API and token-verified WebSockets. Open to building custom chat features into your product too! 💬"
+
   if (/property|real estate|propertybazar/.test(q))
     return "A real estate platform is currently in development — coming soon! In the meantime, Noor has delivered multiple AI-based projects and e-commerce sites. Stay tuned. 🏠"
 
@@ -89,7 +92,7 @@ function smartFallback(text) {
     return "Noor has built and delivered multiple e-commerce development sites for clients — covering everything from product catalogs to checkout flows and admin dashboards. 🛒"
 
   if (/project|built|made|portfolio|showcase/.test(q))
-    return "Noor has built multiple AI-based projects — Dermalyze (skin disease detection), Plantey (plant disease Android app), an RPA insurance document classification system, AI Air Canvas, and an AI content toolkit — plus several e-commerce development sites, with a real estate platform coming soon. Click any project card to explore details and demo videos! 🎬"
+    return "Noor has built multiple AI-based projects — Dermalyze (skin disease detection), Plantey (plant disease Android app), an RPA insurance document classification system, AI Air Canvas, an AI content toolkit, and a real-time WhatsApp-style messenger app — plus several e-commerce development sites, with a real estate platform coming soon. Click any project card to explore details and demo videos! 🎬"
 
   if (/skill|know|tech|stack|language|tool|framework/.test(q))
     return "Noor works with Python, JavaScript, Java, Kotlin, TensorFlow, PyTorch, Keras, OpenCV, React.js, React Native, FastAPI, Firebase, Supabase, Cloudinary, MongoDB, OpenAI API, LangChain and more. She specialises in AI integrations and full-stack development! 🧠"
