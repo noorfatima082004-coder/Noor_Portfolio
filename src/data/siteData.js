@@ -178,6 +178,7 @@ export const projects = [
     description: 'An all-in-one AI writing assistant delivered for an Upwork client — detects plagiarism, summarizes long documents, converts PDFs into editable Word files, and rephrases text to improve originality, all from a single streamlined tool.',
     tags: ['Python', 'NLP', 'Plagiarism Detection', 'Text Summarization', 'PDF to DOCX', 'Paraphrasing'],
     image: '/images/ai-plagiarism-thumbnail.jpg',
+    youtube: 'https://www.youtube.com/embed/fwojR9d77js',
     featured: true,
     details: [
       'Plagiarism Detection: Scans submitted text and flags duplicated or unoriginal content with a similarity score, helping writers verify originality before submission.',
