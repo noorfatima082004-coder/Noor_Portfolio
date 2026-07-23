@@ -251,7 +251,7 @@ export const experience = [
     id: 1,
     role: 'Backend AI Engineer',
     company: 'FlyRank AI — Chicago, USA',
-    period: '2024 — Present',
+    period: '2026 — Present',
     description: 'Working remotely with a Chicago-based AI company on backend AI engineering — building and integrating intelligent systems, APIs, and AI-powered features into production pipelines.',
   },
   {

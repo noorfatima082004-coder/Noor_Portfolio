@@ -21,7 +21,7 @@ PROJECTS (AI-based): Dermalyze (AI skin disease detection), Plantey (Android pla
 
 RESEARCH & PUBLICATIONS: Co-authored research on Audiovisual Fake Face (AVFF) Detection for Urdu-language media — the first deepfake detection system targeting Urdu (70M+ speakers). Achieved 94.3% accuracy and 0.984 ROC-AUC using a multimodal deep learning approach (EfficientNet-B4 for video, a 2D-CNN for audio/MFCCs, and cross-modal attention). The paper is currently being prepared for publication and should be published soon.
 
-EXPERIENCE: Backend AI Engineer at FlyRank AI, Chicago (2024–Present); Freelance AI/ML Engineer with 2+ years across multiple AI projects and e-commerce sites (real estate project coming soon); Android Development Intern at Tech Hub Institute.
+EXPERIENCE: Backend AI Engineer at FlyRank AI, Chicago (2026–Present); Freelance AI/ML Engineer with 2+ years across multiple AI projects and e-commerce sites (real estate project coming soon); Android Development Intern at Tech Hub Institute.
 
 AVAILABILITY: Available for freelance projects and full-time roles.
 PRICING: Market-competitive but negotiable — depends on project scope.
