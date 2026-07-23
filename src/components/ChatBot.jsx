@@ -44,8 +44,6 @@ const QUICK_OPTIONS = [
   { label: '💼 Experience', query: 'Tell me about your experience' },
 ]
 
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY
-
 // Smart fallback — works without API key. Order matters: specific intents are
 // checked before broad ones so a bare "project" mention can't get swallowed
 // by the hire/contact branches.
@@ -112,32 +110,26 @@ function smartFallback(text) {
   if (/thank|shukriya|thanks/.test(q))
     return "You're welcome! 😊 Feel free to ask anything else, or reach out to Noor directly at noor.fatima.082004@gmail.com"
 
-  return "Great question! For the most accurate answer, you can reach Noor directly on WhatsApp at +923128315415 or email noor.fatima.082004@gmail.com — she'd love to chat! Meanwhile, feel free to browse her projects and skills on this site. 😊"
+  return "Great question! I can share details about Noor's skills, projects, and work experience — just ask me about any of those. For more specific details about Noor herself, you'll need to reach her directly on WhatsApp at +923128315415 or email noor.fatima.082004@gmail.com. 😊"
 }
 
 async function askGemini(messages) {
-  if (!API_KEY || API_KEY === 'your_gemini_api_key_here') return null
-
   const contents = messages.map(m => ({
     role: m.role === 'assistant' ? 'model' : 'user',
     parts: [{ text: m.content }]
   }))
 
-  const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
-        contents,
-        generationConfig: { temperature: 0.7, maxOutputTokens: 300 }
-      })
-    }
-  )
+  const res = await fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+      contents
+    })
+  })
   if (!res.ok) return null
   const data = await res.json()
-  return data.candidates?.[0]?.content?.parts?.[0]?.text || null
+  return data.text || null
 }
 
 function Bubble({ msg }) {
